@@ -1,0 +1,29 @@
+body {
+  background: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.App {
+  position: relative;
+  background: #222;
+}
+
+.Ball {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #444;
+  left: -40px;
+  top: -40px;
+  box-shadow: 0 4px 7px -1px rgba(0,0,0,0.7);
+}
