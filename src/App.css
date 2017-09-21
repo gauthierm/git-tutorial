@@ -1,5 +1,5 @@
 body {
-  background: #333;
+  background: #111;
   margin: 0;
   padding: 0;
   display: flex;
@@ -12,18 +12,18 @@ body {
 
 .App {
   position: relative;
-  background: #222;
+  background: #22272E;
 }
 
 .Ball {
   position: absolute;
   top: 0;
   left: 0;
-  width: 80px;
-  height: 80px;
+  width: 112px;
+  height: 112px;
   border-radius: 50%;
-  background: #444;
+  background: #2D3238;
   left: -40px;
   top: -40px;
-  box-shadow: 0 4px 7px -1px rgba(0,0,0,0.7);
+  box-shadow: 0 4px 7px -1px rgba(0,0,0,0.4);
 }
