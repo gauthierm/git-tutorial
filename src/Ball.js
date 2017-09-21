@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { Motion, spring } from 'react-motion';
 
-const springParams = { stiffness: 120, damping: 7 };
+const springParams = { stiffness: 220, damping: 14 };
 
 export default function Ball(props) {
   const { ball } = props;
