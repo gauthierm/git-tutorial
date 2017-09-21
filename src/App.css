@@ -17,13 +17,11 @@ body {
 
 .Ball {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 112px;
   height: 112px;
   border-radius: 50%;
   background: #2D3238;
-  left: -40px;
   top: -40px;
+  left: -40px;
   box-shadow: 0 4px 7px -1px rgba(0,0,0,0.4);
 }
