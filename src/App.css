@@ -17,10 +17,76 @@ body {
 
 .Ball {
   position: absolute;
+  width: 200px;
+  height: 200px;
+  top: -100px;
+  left: -100px;
+}
+
+.Ball::before {
+  display: block;
+  content: ' ';
+  position: absolute;
   width: 112px;
   height: 112px;
+  top: 44px;
+  left: 44px;
   border-radius: 50%;
-  background: linear-gradient(0deg, #579 0%, #579 50%, #aaa 50%, #aaa 100%);
-  top: -56px;
-  left: -56px;
+  background: #22272E;
+}
+
+.Ball::after {
+  display: block;
+  content: ' ';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 0;
+  left: 0;
+  background-position: center;
+  background-size: 200px 200px;
+}
+
+.Ball-0::after {
+  background-image: url('images/merkel1.png');
+}
+
+.Ball-1::after {
+  background-image: url('images/merkel2.png');
+}
+
+.Ball-2::after {
+  background-image: url('images/merkel3.png');
+}
+
+.Ball-3::after {
+  background-image: url('images/merkel4.png');
+}
+
+.Ball-4::after {
+  background-image: url('images/merkel5.png');
+}
+
+.Ball-5::after {
+  background-image: url('images/merkel8.png');
+}
+
+.Ball-6::after {
+  background-image: url('images/merkel9.png');
+}
+
+.Ball-7::after {
+  background-image: url('images/merkel1.png');
+}
+
+.Ball-8::after {
+  background-image: url('images/merkel4.png');
+}
+
+.Ball-9::after {
+  background-image: url('images/merkel9.png');
+}
+
+.Ball-10::after {
+  background-image: url('images/merkel2.png');
 }
