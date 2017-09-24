@@ -76,6 +76,7 @@ export default class Ball extends Component {
     return (
       <div style={this.getWrapperStyles()}>
         <Body
+          id={Matter.Common.nextId()}
           args={[startX, startY, size / 2]}
           ref={this.init}
           restitution={1}
