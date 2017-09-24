@@ -26,25 +26,25 @@ class App extends Component {
     const ceiling = Matter.Bodies.rectangle(
       field.width / 2, -5,
       field.width, 10,
-      { isStatic: true, id: 40 },
+      { isStatic: true },
     );
 
     const ground = Matter.Bodies.rectangle(
       field.width / 2, field.height + 5,
       field.width, 10,
-      { isStatic: true, id: 10 },
+      { isStatic: true },
     );
 
     const leftWall = Matter.Bodies.rectangle(
       -5, field.height / 2,
       10, field.height,
-      { isStatic: true, id: 20 },
+      { isStatic: true },
     );
 
     const rightWall = Matter.Bodies.rectangle(
       field.width + 5, field.height / 2,
       10, field.height,
-      { isStatic: true, id: 30 },
+      { isStatic: true },
     );
 
     world.gravity.x = 0;
