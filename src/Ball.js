@@ -65,11 +65,11 @@ export default class Ball extends Component {
       Matter.Body.setVelocity(body, velocity);
     }
 
-    this.setState({
+    this.setState(() => ({
       x: body.position.x,
       y: body.position.y,
       angle: body.angle,
-    });
+    }));
   };
   render() {
     const { id, size, startX, startY } = this.props;
