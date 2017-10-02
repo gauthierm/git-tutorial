@@ -10,17 +10,30 @@ body {
   overflow: hidden;
 }
 
+@keyframes background-animation {
+  0% { background-position: 0 center; }
+  100% { background-position: 720px center; }
+}
+
 .App {
   position: relative;
-  background: #22272E;
+  background: url('images/field-seamless.jpg');
+  background-size: cover;
+  background-position: 10px center;
+  background-repeat: repeat;
+  animation: background-animation 2.5s infinite;
+  animation-timing-function: linear;
 }
 
 .Ball {
   position: absolute;
   width: 112px;
   height: 112px;
-  border-radius: 50%;
-  background: linear-gradient(0deg, #579 0%, #579 50%, #aaa 50%, #aaa 100%);
+  background: url('images/cat.gif');
+  background-size: 70px 60px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   top: -56px;
   left: -56px;
 }

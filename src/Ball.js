@@ -48,6 +48,8 @@ export default class Ball extends Component {
     Matter.Body.setAngularVelocity(body, 0.0);
   }
   update = () => {
+    const maxCWAngle = (13 * Math.PI) / 180;
+    const maxCCWAngle = (10 * Math.PI) / 180;
     const { body } = this.body;
     const magnitude = Matter.Vector.magnitude(body.velocity);
 
@@ -63,6 +65,15 @@ export default class Ball extends Component {
       const scale = maxVelocity / magnitude;
       const velocity = Matter.Vector.mult(body.velocity, scale);
       Matter.Body.setVelocity(body, velocity);
+    }
+
+    // Keep cats right-side up
+    if (body.angle > maxCWAngle) {
+      Matter.Body.setAngularVelocity(body, -0.01);
+    }
+
+    if (body.angle < -maxCCWAngle) {
+      Matter.Body.setAngularVelocity(body, 0.01);
     }
 
     this.setState(() => ({
