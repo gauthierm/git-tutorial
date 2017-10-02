@@ -19,8 +19,8 @@ body {
   position: absolute;
   width: 112px;
   height: 112px;
-  border-radius: 50%;
-  background: linear-gradient(0deg, #579 0%, #579 50%, #aaa 50%, #aaa 100%);
+  background: url('images/floppy-disk@2x.png');
+  background-size: 112px 112px;
   top: -56px;
   left: -56px;
 }

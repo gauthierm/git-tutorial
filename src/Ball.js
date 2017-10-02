@@ -72,17 +72,24 @@ export default class Ball extends Component {
     }));
   };
   render() {
+    const tab = 14;
     const { id, size, startX, startY } = this.props;
     return (
       <div style={this.getWrapperStyles()}>
         <Body
           id={Matter.Common.nextId()}
-          args={[startX, startY, size / 2]}
+          args={[startX, startY, [
+            { x: 0, y: 0 },
+            { x: size - tab, y: 0 },
+            { x: size, y: tab },
+            { x: size, y: size },
+            { x: 0, y: size },
+          ]]}
           ref={this.init}
           restitution={1}
           friction={0.1}
           frictionAir={0}
-          shape="circle"
+          shape="fromVertices"
         >
           <div className={`Ball Ball-${id}`} />
         </Body>
