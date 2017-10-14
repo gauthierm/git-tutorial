@@ -37,3 +37,31 @@ body {
   top: -56px;
   left: -56px;
 }
+
+.Ball-0 {
+  filter: hue-rotate(0);
+}
+
+.Ball-1 {
+  filter: hue-rotate(51deg);
+}
+
+.Ball-2 {
+  filter: hue-rotate(102deg);
+}
+
+.Ball-3 {
+  filter: hue-rotate(153deg);
+}
+
+.Ball-4 {
+  filter: hue-rotate(204deg);
+}
+
+.Ball-5 {
+  filter: hue-rotate(255deg);
+}
+
+.Ball-6 {
+  filter: hue-rotate(306deg);
+}
