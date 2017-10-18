@@ -33,7 +33,7 @@ export default class Ball extends Component {
   getWrapperStyles() {
     const { x, y, angle } = this.state;
     const { scale } = this.context;
-    const catScale = 0.8 + (((y - 56) / 368) * 0.2);
+    const catScale = 0.5 + (((y - 56) / 198) * 0.5);
 
     return {
       position: 'absolute',

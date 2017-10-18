@@ -3,14 +3,15 @@ import { Stage, Loop, World } from 'react-game-kit';
 import Matter from 'matter-js';
 import Ball from './Ball';
 import CoordinateFactory from './CoordinateFactory';
+import Background from './Background';
 
 import './App.css';
 
 const numBalls = 7;
 const ballSize = 112;
 const field = {
-  width: 720,
-  height: 480,
+  width: 860,
+  height: 310,
 };
 
 const coordinateFactory = new CoordinateFactory(ballSize, field.width, field.height);
@@ -59,20 +60,23 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="App" style={{ width: `${field.width}px`, height: `${field.height}px` }}>
-        <Loop>
-          <Stage width={field.width} height={field.height}>
-            <World onInit={this.physicsInit}>
-              {balls.map(ball => (<Ball
-                key={ball.id}
-                id={ball.id}
-                size={ballSize}
-                startX={ball.position.x}
-                startY={ball.position.y}
-              />))}
-            </World>
-          </Stage>
-        </Loop>
+      <div>
+        <Background />
+        <div className="App" style={{ width: `${field.width}px`, height: `${field.height}px` }}>
+          <Loop>
+            <Stage width={field.width} height={field.height}>
+              <World onInit={this.physicsInit}>
+                {balls.map(ball => (<Ball
+                  key={ball.id}
+                  id={ball.id}
+                  size={ballSize}
+                  startX={ball.position.x}
+                  startY={ball.position.y}
+                />))}
+              </World>
+            </Stage>
+          </Loop>
+        </div>
       </div>
     );
   }
