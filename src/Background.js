@@ -54,6 +54,7 @@ export default class Background extends Component {
     scene.add(ambientLight);
 
     camera.position.z = 500;
+    camera.position.y = 30;
 
     const renderer = new THREE.WebGLRenderer({ canvas: this.canvas });
     renderer.setSize(1024, 768);
@@ -63,7 +64,7 @@ export default class Background extends Component {
     function animate() {
       requestAnimationFrame(animate);
       rotation += 0.01;
-      texture.offset.x -= 0.007;
+      texture.offset.x += 0.007;
       skybox.rotation.y = Math.sin(rotation) * 0.1;
       renderer.render(scene, camera);
     }

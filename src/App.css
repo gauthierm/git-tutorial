@@ -12,7 +12,7 @@ body {
 
 .App {
   position: relative;
-  top: 210px;
+  top: -200px;
 }
 
 .Background {
@@ -25,43 +25,56 @@ body {
   height: 768px;
 }
 
+@keyframes background-animation {
+  0% { background-position: 0 0; }
+  100% { background-position: -3330px 0; }
+}
+
 .Ball {
   position: absolute;
-  width: 112px;
-  height: 112px;
-  background: url('images/cat.gif');
-  background-size: 70px 60px;
-  background-size: contain;
-  background-position: center;
+  width: 111px;
+  height: 128px;
+  background: url('images/freedom.png');
+  background-size: 3330px 128px;
+  background-position: 0 0;
   background-repeat: no-repeat;
-  top: -56px;
-  left: -56px;
+  top: -55.5px;
+  left: -64px;
+  filter: brightness(1.4);
+  animation: background-animation 1s steps(30) infinite;
 }
 
 .Ball-0 {
-  filter: hue-rotate(0);
+  animation-delay: 0.0s;
+  animation-duration: 1.1s;
 }
 
 .Ball-1 {
-  filter: hue-rotate(51deg);
+  animation-delay: 0.1s;
+  animation-duration: 1.2s;
 }
 
 .Ball-2 {
-  filter: hue-rotate(102deg);
+  animation-delay: 0.2s;
+  animation-duration: 1.3s;
 }
 
 .Ball-3 {
-  filter: hue-rotate(153deg);
+  animation-delay: 0.3s;
+  animation-duration: 0.9s;
 }
 
 .Ball-4 {
-  filter: hue-rotate(204deg);
+  animation-delay: 0.4s;
+  animation-duration: 0.8s;
 }
 
 .Ball-5 {
-  filter: hue-rotate(255deg);
+  animation-delay: 0.5s;
+  animation-duration: 1.0s;
 }
 
 .Ball-6 {
-  filter: hue-rotate(306deg);
+  animation-delay: 0.6s;
+  animation-duration: 1.4s;
 }
