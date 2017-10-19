@@ -42,6 +42,7 @@ export default class Background extends Component {
     material.map = texture;
 
     const skybox = new THREE.Mesh(geometry, material);
+    skybox.rotation.x = -0.1;
     scene.add(skybox);
 
     for (let i = -4; i < 5; i += 1) {
@@ -53,7 +54,7 @@ export default class Background extends Component {
     const ambientLight = new THREE.AmbientLight(0xbbbbbb);
     scene.add(ambientLight);
 
-    camera.position.z = 500;
+    camera.position.z = 400;
     camera.position.y = 30;
 
     const renderer = new THREE.WebGLRenderer({ canvas: this.canvas });

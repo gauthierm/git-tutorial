@@ -91,7 +91,7 @@ export default class Ball extends Component {
           id={Matter.Common.nextId()}
           args={[startX, startY, size / 2]}
           ref={this.init}
-          restitution={1}
+          restitution={0.9}
           friction={0.1}
           frictionAir={0}
           shape="circle"
