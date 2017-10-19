@@ -49,7 +49,7 @@ class App extends Component {
     );
 
     world.gravity.x = 0;
-    world.gravity.y = 0.5;
+    world.gravity.y = 0.3;
 
     Matter.World.add(world, [
       ground,
