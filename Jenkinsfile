@@ -1,9 +1,17 @@
 pipeline {
   agent any
+
   stages {
-    stage ('run') {
+    stage ('install') {
       sh 'yarn install'
-      sh 'yarn start'
+    }
+
+    stage ('lint') {
+      sh 'yarn lint'
+    }
+
+    stage ('build') {
+      sh 'yarn build'
     }
   }
 }
