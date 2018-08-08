@@ -1,6 +1,6 @@
 stages {
   stage ('run') {
-    yarn install
-    yarn start
+    sh 'yarn install'
+    sh 'yarn start'
   }
 }
